@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container-inner container-documentation">
+
+        <img class="logo-main" src="{{url_for('static', filename='img/logo-chu-caen.jpg')}}"/>
+        <h1 class="page-title display-1">{% block title %}API CHU{% endblock %}</h1>
+
+        <p class="comments-page-subtitle">par David Scanu</p>
+        <p class="lead">Documentation concernant l'API CHU. Retrouvez ici les différents endpoints qui permettent de communiquer avec notre API.</p>
+
+        <div class="documentation-item">
+            <h2>Matériels</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>URL</th>
+                            <th>Description</th>
+                            <th>Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <code>/materiels</code>
+                        </td>
+                        <td>Retourne tous les matériels</td>
+                        <td>GET</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/materiel/materiel_id</code>
+                        </td>
+                        <td>Retourne un materiel par ID</td>
+                        <td>GET</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/add_materiel</code>
+                        </td>
+                        <td>Ajoute un materiel</td>
+                        <td>POST</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/update_materiel/materiel_id</code>
+                        </td>
+                        <td>Met à jour un materiel</td>
+                        <td>PUT</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/delete_materiel/materiel_id</code>
+                        </td>
+                        <td>Supprime un materiel</td>
+                        <td>DELETE</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="documentation-item">
+            <h2>Employés</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>URL</th>
+                            <th>Description</th>
+                            <th>Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <code>/employes</code>
+                        </td>
+                        <td>Retourne tous les employés</td>
+                        <td>GET</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/employe/employe_id</code>
+                        </td>
+                        <td>Retourne un employé par ID</td>
+                        <td>GET</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/add_employe</code>
+                        </td>
+                        <td>Ajoute un employé</td>
+                        <td>POST</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/update_employe/employe_id</code>
+                        </td>
+                        <td>Met à jour un employé</td>
+                        <td>PUT</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>/delete_employe/employe_id</code>
+                        </td>
+                        <td>Supprime un employémateriel</td>
+                        <td>DELETE</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer class="documentation-footer">
+            <nav>
+                <a href="https://github.com/DavidScanu/brief-api-chu" target="_blank">Le projet sur GitHub</a>
+            </nav>
+        </footer>
+
+    </div>
+
+{% endblock %}
